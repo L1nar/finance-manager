@@ -9,7 +9,8 @@ function addTask () {
     let newItem = document.createElement('td');
     newItem.classList.add('purcashes__td');
     newItem.textContent = input.textContent;
+    list.appendChild(item);
     item.appendChild(newItem);
 }
 
-btn.addEventListener('click', addTask); 
+btn.addEventListener('click', addTask);
