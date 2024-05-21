@@ -5,6 +5,7 @@
 html,
 body {
     height: 100%;
+    margin: 0;
 }
 
 ul {
@@ -163,6 +164,9 @@ h3 {
 
 .purcashes__row td {
     padding: 10px;
+}
+
+.purcashes__list {
 }
 
 .purcashes__item .purcashes__price::after,
