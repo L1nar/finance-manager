@@ -39,19 +39,19 @@
                     <ul class="legend__list">
                         <li class="legend__item" data-category="product">
                             <span class="legend__category">Продукты</span>
-                            <span class="legend__price" data-price="product">0</span>
+                            <span class="legend__price" data-price="Продукты">0</span>
                         </li>
                         <li class="legend__item" data-category="fastfood">
                             <span class="legend__category">ФастФуд</span>
-                            <span class="legend__price">0</span>
+                            <span class="legend__price" data-price="ФастФуд">0</span>
                         </li>
                         <li class="legend__item" data-category="sport">
                             <span class="legend__category">Спорт</span>
-                            <span class="legend__price">0</span>
+                            <span class="legend__price" data-price="Спорт">0</span>
                         </li>
                         <li class="legend__item" data-category="drinks">
                             <span class="legend__category">Напитки</span>
-                            <span class="legend__price">0</span>
+                            <span class="legend__price" data-price="Напитки">0</span>
                         </li>
                     </ul>
                 </div>
@@ -70,8 +70,8 @@
                          <tr class="purcashes__item purcashes__row" data-category="product">
                             <!-- <td class="purcashes__td"></td>
                             <td class="purcashes__td"></td>
-                            <td class="purcashes__td"></td>
-                            <td class="purcashes__td"><i class="purcashes__item-del fa-solid fa-xmark"></i></td> -->
+                            <td class="purcashes__td"></td> -->
+                            <!-- <td class="purcashes__td purcashes__td-del"><i class="purcashes__item-del fa-solid fa-xmark"></i></td> -->
                         </tr>
                     </tbody>
                 </table>
@@ -90,10 +90,10 @@
                     <div class="editor__form-row">
                         <p class="editor__form-input-name">Категория:</p>
                         <select name="select-category" id="selectCategory" class="editor__form-input">
-                            <option value="poduct">Продукты</option>
-                            <option value="fastFood">ФастФуд</option>
-                            <option value="sport">Спорт</option>
-                            <option value="drinks">Напитки</option>
+                            <option value="Продукты">Продукты</option>
+                            <option value="ФастФуд">ФастФуд</option>
+                            <option value="Спорт">Спорт</option>
+                            <option value="Напитки">Напитки</option>
                         </select>
                     </div>
                     <div class="editor__form-row">
@@ -102,6 +102,14 @@
                 </form>
             </div>
         </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-text">Вы действительно хотите удалить эту задачу?</div>
+              <button class="closeBtn" id="close">&times;</button>
+              <button class="cancelBtn" id="cancel">Отмена</button>
+              <button class="removeBtn" id="remove">Удалить</button>
+            </div>
+          </div>
     </div>
     <script src="script.js"></script>
 </body>
