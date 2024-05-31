@@ -297,6 +297,10 @@ h3 {
     font-size: 24px;
 }
 
+.closeBtn:hover {
+    cursor: pointer;
+}
+
 .modal-text {
     position: absolute;
     max-width: 250px;

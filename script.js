@@ -9,8 +9,11 @@ const closeBtn = document.querySelector('#close');
 const cancelBtn = document.querySelector('#cancel');
 const removeBtn = document.querySelector('#remove');
 const price = document.querySelectorAll('.legend__price');
-const firstPrice = price[0];
-console.log(firstPrice.dataset.price);
+const dataProducts = document.querySelector('[data-price="Продукты"]');
+const dataFastfood = document.querySelector('[data-price="ФастФуд"]');
+const dataSport = document.querySelector('[data-price="Спорт"]');
+const dataDrinks = document.querySelector('[data-price="Напитки"]');
+
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -42,8 +45,19 @@ function addTask () {
       });
 
     itemName.textContent = inputName.value;
-    itemPrice.textContent = inputPrice.value;
+    itemPrice.textContent = `${inputPrice.value}₽`;
     options.textContent = category.value;
+
+    if (category.value === 'Продукты') {
+      dataProducts.innerText = inputPrice.value;
+    } else if (category.value === 'ФастФуд') {
+      dataFastfood.innerText = inputPrice.value;
+    } else if (category.value === 'Спорт') {
+      dataSport.innerText = inputPrice.value;
+    } else if (category.value === 'Напитки') {
+      dataDrinks.innerText = inputPrice.value;
+    }
+
 
     if (inputName.value === '') {
       alert('Поле "Товар" обязательно для ввода.')
